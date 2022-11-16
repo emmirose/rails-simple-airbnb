@@ -1,0 +1,24 @@
+<div class = "containant">
+<h1>All our Flats (<%= @flats.count %>)</h1>
+
+
+<ul>
+<div class = "flats">
+<% @flats.each do |flat| %>
+<li>
+<div class = "flat">
+<h3><%= flat.name %></h3>
+<p><%= flat.address %></p>
+<div class="infos">
+<p><i class="fa-solid fa-person"></i>  <%= flat.number_of_guests %></p>
+<p><i class="fa-solid fa-euro-sign"></i>  <%= flat.price_per_night %></p>
+</div>
+<div>
+<%= link_to "More info", flat_path(flat)%>
+ </div>
+</div>
+</li>
+<% end %>
+</div>
+</ul>
+</div>
